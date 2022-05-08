@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Please Provide other details</title>
+    <link rel="stylesheet" type= "text/css" href="{{url_for('static',filename = 'styles/style2.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4" color="Green">Nebula Mutual Fund</h1>
+        <p class="lead">An Asset Management Company with a strong focus on Performance while minizing risk.</p>
+      </div>
+    </div>
+    <div class="container1">
+      <div class="form_title">
+        <span class="enterdetails"><h1>Enter Details</h1></span>
+      </div>
+      <div class="right">
+        <div class="snippets">
+          <h4 class="titles">Name:</h4>
+          <p class="values">{{name}}</p>
+          <p class="values">{{lst['name']}}</p>
+
+
+        </div>
+        <div class="snippets">
+          <h4 class="titles">Pan Number:</h4>
+<!--           <p class="values">{{pannumber}}</p>
+ -->          <p class="values">{{lst['name']}}</p>
+
+        </div>
+        <div class="snippets">
+          <h4 class="titles">Phone Number:</h4>
+<!--           <p class="values">{{number}}</p>
+ -->          <p class="values">{{lst['mobilenumber']}}</p>
+
+        </div>
+        <div class="snippets">
+          <h4 class="titles">DOB:</h4>
+<!--           <p class="values">{{dateofbirth}}</p>
+ -->          <p class="values">{{lst['dateofbirth']}}</p>
+
+        </div>
+
+        <div class="snippets">
+          <h4 class="titles">Email:</h4>
+<!--           <p class="values">{{emailid}}</p>
+ -->          <p class="values">{{lst['emailid']}}</p>
+
+        </div>
+
+
+      </div>
+      <div class="left">
+           <form class="" action="{{url_for('nominee')}}" method="post">
+
+             <div class="blocks">
+               <h4 class="names">Country of Birth</h4>
+               <select class="form-select" aria-label="Default select example" name="birthcountry">
+                  <option selected>Open this select menu</option>
+                  <option value="India">India</option>
+                  <option value="Australia">Australia</option>
+                  <option value="UK">UK</option>
+               </select>
+             </div>
+
+             <div class="blocks">
+               <h4 class="names">Occupation</h4>
+               <select class="form-select" aria-label="Default select example"             name="occupation">
+                  <option selected>Open this select menu</option>
+                  <option value="Private Service">Private Service</option>
+                  <option value="Business">Business</option>
+                  <option value="Government Job">Government Job</option>
+               </select>
+             </div>
+
+             <div class="blocks">
+               <h4 class="names">Income Slab</h4>
+               <select class="form-select" aria-label="Default select example"          name="incomeslab">
+                  <option selected>Open this select menu</option>
+                  <option value="1-5 lac">1-5 lac</option>
+                  <option value="5-10 lac">5-10 lac</option>
+                  <option value="10-15 lac">10-15 lac</option>
+               </select>
+             </div>
+             <div class="blocks">
+               <h4 class="names">Is investor politically exposed?</h4>
+               <label for="">YES</label>
+               <input type="radio" name="politically_exposed" value="YES">
+               <label for="">NO</label>
+               <input type="radio" name="politically_exposed" value="NO">
+
+             </div>
+             <div class="blocks">
+               <h4 class="names">Is investor tax resident of any country other than India?</h4>
+               <label for="">YES</label>
+               <input type="radio" name="taxresident" value="YES">
+               <label for="">NO</label>
+               <input type="radio" name="taxresident" value="NO">
+
+
+             </div>
+             <div class="button">
+               <input type="submit" name="" value="Next">
+
+             </div>
+           </form>
+      </div>
+
+    </div>
+  </body>
+</html>

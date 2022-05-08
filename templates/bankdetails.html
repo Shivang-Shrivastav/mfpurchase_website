@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bank Details</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'styles/bank_details.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4" color="Green">Nebula Mutual Fund</h1>
+        <p class="lead">An Asset Management Company with a strong focus on Performance while minizing risk.</p>
+      </div>
+    </div>
+    <div class="container1">
+      <div class="form_title">
+        <span class="enterdetails"><h1>Bank Details</h1></span>
+      </div>
+      <div class="right">
+        <div class="subblock-left" style="width:50%;float:left;">
+
+          <div class="snippets">
+            <span class="titles">Name:</span>
+            <span class="values">Shivang Shrivastav</span>
+
+          </div>
+          <div class="snippets">
+            <span class="titles">PAN Number:</span>
+            <span class="values">CLDPS5053H</span>
+
+          </div>
+          <div class="snippets">
+            <span class="titles">Phone Number:</span>
+            <span class="values">8000257708</span>
+
+          </div>
+          <div class="snippets">
+            <span class="titles">DOB:</span>
+            <span class="values">04-08-1983</span>
+
+          </div>
+          <div class="snippets">
+            <span class="titles">Country:</span>
+            <span class="values">India</span>
+
+          </div>
+
+          <div class="snippets" style="color:green">
+            <span class="titles">Nominee Name:</span>
+            <span class="values">Manjari Shrivastav</span>
+
+          </div>
+
+          <div class="snippets" style="color:green">
+            <span class="titles">Date of Birth:</span>
+            <span class="values">07-08-1960</span>
+
+          </div>
+        </div>
+        <div class="subblock-right" style="width:50%;float:right;">
+
+          <div class="snippets">
+            <span class="titles">Occupation:</span>
+            <span class="values">Private Job</span>
+
+          </div>
+          <div class="snippets">
+            <span class="titles">Income Slab:</span>
+            <span class="values">1 - 5lac</span>
+
+          </div>
+          <div class="snippets">
+            <span class="titles">Politically Exposed:</span>
+            <span class="values">No</span>
+
+          </div>
+          <div class="snippets">
+            <span class="titles">Tax Resident of Other Country:</span>
+            <span class="values">No</span>
+
+          </div>
+
+          <div class="snippets" style="color:green">
+            <span class="titles">Relationship with Investor:</span>
+            <span class="values">Mother</span>
+
+          </div>
+
+          <div class="snippets" style="color:green">
+            <span class="titles" >Nominee Number:</span>
+            <span class="values">9714488957</span>
+
+          </div>
+
+          <div class="snippets" style="color:green">
+            <span class="titles">Allocation:</span>
+            <span class="values">100%</span>
+
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="left">
+           <form class="" action="{{url_for('review')}}" method="post">
+
+             <div class="blocks">
+               <h4 class="names">Bank Name</h4>
+               <select class="form-select" aria-label="Default select example" name="bankname">
+                  <option selected>Drop Down</option>
+                  <option value="HDFC">HDFC Bank</option>
+                  <option value="AXIS">Axis Bank</option>
+                  <option value="ICIC">ICICI Bank</option>
+                  <option value="IDFC">IDFC First Bank</option>
+                  <option value="SBI">SBI</option>
+                  <option value="YES">Yes Bank</option>
+               </select>
+
+             </div>
+
+             <div class="blocks">
+               <h4 class="names">Account Type</h4>
+               <select class="form-select" aria-label="Default select example" name="accounttype">
+                  <option selected>Drop Down</option>
+                  <option value="Savings">Savings</option>
+                  <option value="Current">Current</option>
+
+               </select>
+             </div>
+
+             <div class="blocks">
+               <h4 class="names">Account Number</h4>
+               <input type="text" name="accountnumber" placeholder="Enter Account Number" STYLE='background-color: #92b582' size="40">
+             </div>
+
+             <div class="blocks">
+               <h4 class="names">IFSC Code</h4>
+               <input type="text" name="ifsc" placeholder="IFSC Code" STYLE='background-color: #92b582' size="40">
+             </div>
+             <div class="blocks">
+               <h4 class="names">Payment Mode</h4>
+               <select class="form-select" aria-label="Default select example" name="modeofpayment">
+                  <option selected>Drop Down</option>
+                  <option value="NETBANKING">NET Banking</option>
+                  <option value="UPI">UPI</option>
+                  <option value="NEFT/RTGS">NEFT/RTGS</option>
+                  <option value="CHEQUE">Cheque</option>
+
+               </select>
+
+
+
+             </div>
+             <div class="button">
+               <input type="submit" name="" value="Review">
+
+             </div>
+           </form>
+           
+      </div>
+
+    </div>
+  </body>
+</html>

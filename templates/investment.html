@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Investment Details</title>
+    <link rel="stylesheet" type= "text/css" href="{{url_for('static',filename = 'styles/style4.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4" color="Green">Nebula Mutual Fund</h1>
+        <p class="lead">An Asset Management Company with a strong focus on Performance while minizing risk.</p>
+      </div>
+    </div>
+    <div class="container1">
+      <div class="form_title">
+        <span class="enterdetails"><h1>Investment Details</h1></span>
+      </div>
+      <div class="right">
+        <div class="subblock-left" style="width:50%;float:left;">
+
+          <div class="snippets">
+            <span class="titles">Name:</span>
+            <span class="values">{{lst['name']}}</span>
+
+          </div>
+          <div class="snippets">
+            <span class="titles">PAN Number:</span>
+            <span class="values">{{lst['pannumber']}}</span>
+
+          </div>
+          <div class="snippets">
+            <span class="titles">Phone Number:</span>
+            <span class="values">{{lst['mobilenumber']}}</span>
+
+          </div>
+          <div class="snippets">
+            <span class="titles">DOB:</span>
+            <span class="values">{{lst['dateofbirth']}}</span>
+
+          </div>
+          <div class="snippets">
+            <span class="titles">Country of Birth:</span>
+            <span class="values">{{lst['birthcountry']}}</span>
+
+          </div>
+
+          <div class="snippets" style="color:green">
+            <span class="titles">Nominee Name:</span>
+            <span class="values">{{lst['nomineename']}}</span>
+
+          </div>
+
+          <div class="snippets" style="color:green">
+            <span class="titles">Date of Birth:</span>
+            <span class="values">{{lst['dob_nominee']}}</span>
+
+          </div>
+        </div>
+        <div class="subblock-right" style="width:50%;float:right;">
+
+          <div class="snippets">
+            <span class="titles">Occupation:</span>
+            <span class="values">{{lst['occupation']}}</span>
+
+          </div>
+          <div class="snippets">
+            <span class="titles">Income Slab:</span>
+            <span class="values">{{lst['incomeslab']}}</span>
+
+          </div>
+          <div class="snippets">
+            <span class="titles">Politically Exposed:</span>
+            <span class="values">{{lst['politically_exposed']}}</span>
+
+          </div>
+          <div class="snippets">
+            <span class="titles">Tax Resident of Other Country:</span>
+            <span class="values">{{lst['taxresident']}}</span>
+
+          </div>
+
+          <div class="snippets" style="color:green">
+            <span class="titles">Relationship with Investor:</span>
+            <span class="values">{{lst['relationship']}}</span>
+
+          </div>
+
+          <div class="snippets" style="color:green">
+            <span class="titles" >Nominee Number:</span>
+            <span class="values">{{lst['nomineenumber']}}</span>
+
+          </div>
+
+          <div class="snippets" style="color:green">
+            <span class="titles">Allocation:</span>
+            <span class="values">{{lst['allocation']}}</span>
+
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+      <div class="left">
+           <form class="" action="{{url_for('bankdetails')}}" method="post">
+
+             <div class="blocks">
+               <h4 class="names">Investment Type</h4>
+               <select class="form-select" aria-label="Default select example" name="investmenttype">
+                  <option selected>Drop Down</option>
+                  <option value="Lumpsum">Lumpsum</option>
+                  <option value="SIP">SIP</option>
+                  <option value="Lumpsum with SIP">Lumpsum with SIP</option>
+               </select>
+
+             </div>
+
+             <div class="blocks">
+               <h4 class="names">Category</h4>
+               <select class="form-select" aria-label="Default select example" name="category">
+                  <option selected>Drop Down</option>
+                  <option value="Debt">Debt</option>
+                  <option value="Equity">Equity</option>
+                  <option value="Hybrid">Hybrid</option>
+                  <option value="Internation FoF">Internation FoFs</option>
+               </select>
+             </div>
+
+             <div class="blocks">
+               <h4 class="names">Scheme Name</h4>
+               <select class="form-select" aria-label="Default select example" name="schemename">
+                  <option selected>Open this select menu</option>
+                  <option value="Nebula Large Cap Fund">Nebula Large Cap Fund</option>
+                  <option value="Nebula Mid Cap Fund">Nebula Mid Cap Fund</option>
+                  <option value="Nebula Small Cap Fund">Nebula Small Cap Fund</option>
+                  <option value="Nebula Hyrbid Fund">Nebula Hyrbid Fund</option>
+                  <option value="ebula Liquid Fund">Nebula Liquid Fund</option>
+                  <option value="Nebula Global Fund">Nebula Global Fund</option>
+                  <option value="Nebula Tax Saver Fund">Nebula Tax Saver Fund</option>
+                  <option value="Nebula Overnight Fund">Nebula Overnight Fund</option>
+               </select>
+             </div>
+             <div class="blocks">
+               <h4 class="names">Option</h4>
+               <label for="">Growth</label>
+               <input type="radio" name="option" value="Growth">
+               <label for="">IDCW Payout</label>
+               <input type="radio" name="option" value="Dividend">
+               <label for="">IDCW Reinvestment</label>
+               <input type="radio" name="option" value="Dividend Reinvestment">
+
+
+             </div>
+
+             <div class="blocks">
+               <h4 class="names">Amount</h4>
+               <input type="text" name="amount" placeholder="Enter Amount" STYLE='background-color: #92b582' size="40">
+             </div>
+
+             <div class="blocks">
+               <h4 class="names">Broker Code</h4>
+               <span>(Optional)</span>
+               <input type="text" name="arn" placeholder="ARN" STYLE='background-color: #92b582' size="6">
+             </div>
+             <div class="blocks">
+               <h4 class="names">Broker EUIN</h4>
+               <span>(Optional)</span>
+               <input type="text" name="euin" STYLE='background-color: #92b582' placeholder="EUIN" size="5" maxlength="6">
+
+
+             </div>
+             <div class="button">
+               <input type="submit" name="" value="Next">
+
+             </div>
+           </form>
+      </div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bank Details</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'styles/review_details.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4" color="Green">Nebula Mutual Fund</h1>
+        <p class="lead">An Asset Management Company with a strong focus on Performance while minizing risk.</p>
+      </div>
+    </div>
+    <div class="title">
+      <h1>Review Details Before Submission</h1>
+
+    </div>
+    <div class="main_container">
+
+      <div class="container1">
+        <div class="snippets1">
+          <span class="titles">Name:</span>
+          <span class="values">Shivang Shrivastav</span>
+
+        </div>
+        <div class="snippets1">
+          <span class="titles">PAN Number:</span>
+          <span class="values">CLDPS5053H</span>
+
+        </div>
+        <div class="snippets1">
+          <span class="titles">Phone Number:</span>
+          <span class="values">8000257708</span>
+
+        </div>
+        <div class="snippets1">
+          <span class="titles">DOB:</span>
+          <span class="values">04-08-1983</span>
+
+        </div>
+        <div class="snippets1">
+          <span class="titles">Occupation:</span>
+          <span class="values">Private Job</span>
+
+        </div>
+        <div class="snippets1">
+          <span class="titles">Income Slab:</span>
+          <span class="values">1 - 5lac</span>
+
+        </div>
+        <div class="snippets1">
+          <span class="titles">Politically Exposed:</span>
+          <span class="values">No</span>
+
+        </div>
+        <div class="snippets1">
+          <span class="titles">Tax Resident of Other Country:</span>
+          <span class="values">No</span>
+
+        </div>
+
+      </div>
+      <div class="container2">
+        <div class="snippets2">
+          <span class="titles">Nominee Name:</span>
+          <span class="values">Manjari Shrivastav</span>
+
+        </div>
+
+        <div class="snippets2">
+          <span class="titles">Date of Birth:</span>
+          <span class="values">07-08-1960</span>
+
+        </div>
+        <div class="snippets2">
+          <span class="titles">Relationship with Investor:</span>
+          <span class="values">Mother</span>
+
+        </div>
+
+        <div class="snippets2">
+          <span class="titles" >Nominee Number:</span>
+          <span class="values">9714488957</span>
+
+        </div>
+
+        <div class="snippets2">
+          <span class="titles">Allocation:</span>
+          <span class="values">100%</span>
+
+        </div>
+
+
+      </div>
+      <div class="container3">
+        <div class="snippets3" >
+          <span class="titles">Scheme Name:</span>
+          <span class="values">NEBULA MID CAP FUND</span>
+
+        </div>
+        <div class="snippets3" >
+          <span class="titles">Option:</span>
+          <span class="values">Growth</span>
+
+        </div>
+        <div class="snippets3" >
+          <span class="titles">Amount: Rs </span>
+          <span class="values">500000</span>
+
+        </div>
+        <div class="snippets3" >
+          <span class="titles">ARN:</span>
+          <span class="values">132600</span>
+
+        </div>
+
+        <div class="snippets3">
+          <span class="titles">EUIN:</span>
+          <span class="values">E053320</span>
+
+        </div>
+
+      </div>
+      <div class="container4">
+        <div class="snippets4">
+          <span class="titles">Bank Name:</span>
+          <span class="values">HDFC BANK</span>
+
+        </div>
+        <div class="snippets4">
+          <span class="titles">Account Type:</span>
+          <span class="values">Savings</span>
+
+        </div>
+        <div class="snippets4">
+          <span class="titles">Account Number:</span>
+          <span class="values">125460215487</span>
+
+        </div>
+        <div class="snippets4">
+          <span class="titles">IFSC Code:</span>
+          <span class="values">HDFC0000006</span>
+
+        </div>
+
+        <div class="snippets4">
+          <span class="titles">Payment Link Sent to Email-ID:</span>
+          <span class="values">shivang.ahd@gmail.com</span>
+
+        </div>
+
+
+      </div>
+    </div>
+    <form class="" action="{{url_for('thankyou')}}" method="post">
+      <div class="button">
+        <input type="submit" name="" value="Make Final Purchase" style="height: 55px; width: 650px;">
+      </div>
+    </form>
+    <div class="empty_space">
+
+    </div>
+
+  </body>
+</html>
